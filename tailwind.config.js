@@ -9,7 +9,7 @@ export default {
       colors: {
         primary: "#F58300",
         secondary: "#00C006",
-        // background: "#fdfefe"
+        background: "#fdfefe"
       },
       fontFamily: {
         nunito: '"Nunito Sans", sans-serif',
