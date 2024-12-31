@@ -1,11 +1,17 @@
-import { Outlet } from 'react-router-dom';
+import { Outlet, useLocation } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import HomePage from './pages/homePage/HomePage';
 
 const Root = () => {
+
+    const location = useLocation();
+    const locationPath = location.pathname.includes('/sign-in') || location.pathname.includes('/sign-up');
+
     return (
         <div>
-            <Navbar></Navbar>
+            {
+                !locationPath && <Navbar></Navbar>
+            }
             <Outlet>
                 <HomePage></HomePage>
             </Outlet>

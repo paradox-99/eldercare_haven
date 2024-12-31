@@ -44,7 +44,7 @@ const Value = () => {
                     </div>
                </div>
                <div className="w-1/2 float-right">
-                    <h3 className="text-xl font-bold">Value for Life</h3>
+                    <h3 className="text-xl font-medium">Value for Life</h3>
                     <h1 className="text-secondary text-5xl font-extrabold mt-5 mb-12"><span className="text-primary">Expert Care</span> of the Elderly</h1>
                     <div className="mt-5">
                          <Accordion

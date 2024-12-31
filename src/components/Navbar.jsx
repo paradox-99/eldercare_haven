@@ -12,6 +12,7 @@ import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import { useEffect, useState } from "react";
+import { Link, useLocation } from 'react-router-dom';
 
 const pages = [
     { title: 'Home', url: '/' },
@@ -32,6 +33,7 @@ const Navbar = () => {
     const [shadow, setShadow] = useState(false);
     const [anchorElNav, setAnchorElNav] = React.useState(null);
     const [anchorElUser, setAnchorElUser] = React.useState(null);
+    const location = useLocation();
 
     const handleOpenNavMenu = (event) => {
         setAnchorElNav(event.currentTarget);
@@ -199,13 +201,14 @@ const Navbar = () => {
                             {
                                 !user &&
                                 <Box>
-                                    <Button
+                                    {/* <Button
                                         onClick={handleCloseNavMenu}
                                         href={'/sign-in'}
                                         sx={{ my: 2, color: 'white', display: 'block', fontWeight: 700, textTransform: "none", background: '#F58300', fontSize: { xs: 14, md: 16 }, ml: { xs: 0, sm: 2 } }}
                                     >
                                         Sign in
-                                    </Button>
+                                    </Button> */}
+                                    <Link to={'/sign-in'} state={location.pathname} className="text-white font-bold bg-[#F58300] px-4 ml-5 py-2 rounded">Sign in</Link>
                                 </Box>
                             }
                         </Toolbar>

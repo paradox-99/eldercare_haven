@@ -7,14 +7,17 @@ import { HelmetProvider } from 'react-helmet-async'
 import { Toaster } from 'react-hot-toast'
 import { ThemeProvider } from '@mui/material'
 import { theme } from './components/Theme'
+import AuthProvider from './provider/AuthProvider'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <HelmetProvider>
-      <ThemeProvider theme={theme}>
-      <RouterProvider router={router} />
-      <Toaster />
-      </ThemeProvider>
-    </HelmetProvider>
+    <AuthProvider>
+      <HelmetProvider>
+        <ThemeProvider theme={theme}>
+          <RouterProvider router={router} />
+          <Toaster />
+        </ThemeProvider>
+      </HelmetProvider>
+    </AuthProvider>
   </StrictMode>,
 )
