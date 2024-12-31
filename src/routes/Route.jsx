@@ -7,6 +7,7 @@ import Blog from "../pages/blog/Blog";
 import Donation from "../pages/donation/Donation";
 import Gallery from "../pages/gallery/Gallery";
 import Signin from "../pages/sign_in/Signin";
+import Signup from "../pages/sign_up/Signup";
 
 const router = createBrowserRouter([
     {
@@ -40,7 +41,11 @@ const router = createBrowserRouter([
             {
                 path: "/sign-in",
                 element: <Signin />
-            }
+            },
+            {
+                path: "/sign-up",
+                element: <Signup />
+            },
         ]
     }
 ])
