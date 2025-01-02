@@ -1,6 +1,8 @@
 import Banner from "./Banner";
 import Blog from "./Blog";
 import Donation from "./Donation";
+import Living from "./Living";
+import Memories from "./Memories";
 import Services from "./Services";
 import Team from "./Team";
 import Testimonial from "./Testimonial";
@@ -15,6 +17,8 @@ const HomePage = () => {
                 <Welcome></Welcome>
                 <Value></Value>
                 <Services></Services>
+                <Memories></Memories>
+                <Living></Living>
                 <Team></Team>
                 <Blog></Blog>
             </div>

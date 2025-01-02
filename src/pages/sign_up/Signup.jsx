@@ -5,6 +5,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import google from "../../assets/icons/google2.png"
 import { PropagateLoader } from "react-spinners";
 import useAuth from "../../hooks/useAuth";
+import { Helmet } from "react-helmet-async";
 
 const Signup = () => {
 
@@ -65,6 +66,9 @@ const Signup = () => {
 
     return (
         <div className="flex flex-col justify-center items-center h-screen">
+            <Helmet>
+                <title>Sign up </title>
+            </Helmet>
             <div className="flex items-center gap-2 mb-8">
                 <img src="/ECH_logo.png" alt="" className="w-14" />
                 <h1 className="text-4xl font-bold">Elder<span className='text-secondary'>Care</span> Haven</h1>

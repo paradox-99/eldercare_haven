@@ -6,6 +6,7 @@ import google from "../../assets/icons/google2.png"
 import useAuth from "../../hooks/useAuth";
 import toast from "react-hot-toast";
 import { PropagateLoader } from "react-spinners";
+import { Helmet } from "react-helmet-async";
 
 const Signin = () => {
 
@@ -69,6 +70,9 @@ const Signin = () => {
 
     return (
         <div className="flex flex-col justify-center items-center h-screen">
+            <Helmet>
+                <title>Sign in </title>
+            </Helmet>
             <div className="flex items-center gap-2 mb-10">
                 <img src="/ECH_logo.png" alt="" className="w-20" />
                 <h1 className="text-[54px] font-bold">Elder<span className='text-secondary'>Care</span> Haven</h1>
