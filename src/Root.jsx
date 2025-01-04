@@ -1,6 +1,5 @@
 import { Outlet, useLocation } from 'react-router-dom';
 import Navbar from './components/Navbar';
-import HomePage from './pages/homePage/HomePage';
 
 const Root = () => {
 
@@ -12,9 +11,7 @@ const Root = () => {
             {
                 !locationPath && <Navbar></Navbar>
             }
-            <Outlet>
-                <HomePage></HomePage>
-            </Outlet>
+            <Outlet></Outlet>
         </div>
     );
 };

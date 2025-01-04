@@ -13,6 +13,7 @@ import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import { useEffect, useState } from "react";
 import { Link, useLocation } from 'react-router-dom';
+import useAuth from '../hooks/useAuth';
 
 const pages = [
     { title: 'Home', url: '/' },
@@ -22,11 +23,11 @@ const pages = [
     { title: 'Donation', url: '/donation' },
     { title: 'Gallery', url: '/gallery' }
 ];
-const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
+const settings = ['Profile', 'Account', 'Dashboard'];
 
 const Navbar = () => {
 
-    const user = false;
+    const { user, logOut } = useAuth();
 
     const [previousScrollY, setPreviousScrollY] = useState(0);
     const [showNavbar, setShowNavbar] = useState(true);
@@ -195,6 +196,9 @@ const Navbar = () => {
                                                 <Typography sx={{ textAlign: 'center', color: "black" }}>{setting}</Typography>
                                             </MenuItem>
                                         ))}
+                                        <MenuItem onClick={logOut}>
+                                            <Typography sx={{ textAlign: 'center', color: "black" }}>Logout</Typography>
+                                        </MenuItem>
                                     </Menu>
                                 </Box>
                             }
